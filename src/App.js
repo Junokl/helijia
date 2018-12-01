@@ -1,0 +1,19 @@
+import React, { Component } from 'react';
+import {Route ,Redirect, Switch} from 'react-router-dom';
+import Index from './pages/Home/index.jsx';
+import List from './pages/List/List.jsx';
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Switch>
+          <Route path='/home/' component={Index} />
+          <Route path='/list/' component={List} />
+          <Redirect exact from='/' to='/home' />
+        </Switch>
+      </div>
+    );
+  }
+}
+
+export default App;
