@@ -32,8 +32,7 @@ class Hfooter extends Component {
                         (() => {
                             return this.state.navs.map((item, index) => {
                                 return (
-
-                                    <li className="cur">
+                                    <li key={index} className="cur" >
                                         <Link to={{ pathname: `${item.href}` }} replace key={index}
                                             onClick={this.gotopath.bind(this, index)}>
                                             <img src={item.imgsrc} cursrc={item.imgsrc} alt='' />

@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 // import {Route} from 'react-router-dom';
 
 import Hfooter from '../../components/Hfooter.jsx';
-// import Hsearch from '../Home/Hsearch.jsx';
+import ListHeader from '../../pages/List/ListHeader.jsx';
 class List extends Component{
     constructor(props){
         super(props);
@@ -12,6 +12,7 @@ class List extends Component{
         return (
 
             <div>
+                <ListHeader></ListHeader>
                 这是List
                 <Hfooter></Hfooter>
             </div>
