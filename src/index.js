@@ -8,6 +8,7 @@ import {createStore} from 'redux';
 //把上面配置好的store 和 react 进行关联
 import { Provider } from 'react-redux';
 import './styles/index.css';
+import './styles/base.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 React.axios = axios;

@@ -3,7 +3,7 @@ import React , {Component} from 'react';
 
 import Hfooter from '../../components/Hfooter.jsx';
 // import Hsearch from '../Home/Hsearch.jsx';
-class List extends Component{
+class Car extends Component{
     constructor(props){
         super(props);
         this.props = props;
@@ -12,11 +12,11 @@ class List extends Component{
         return (
 
             <div>
-                这是List
+                这是Car
                 <Hfooter></Hfooter>
             </div>
             
         );
     }
 }
-export default List;
+export default Car;

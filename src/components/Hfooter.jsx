@@ -10,11 +10,10 @@ class Hfooter extends Component {
         this.state = {
             nav: 0,
             navs: [
-                { title: "凡客", href: "/home/", channel: "", imgsrc: '../imgs/index/Footer-home.png' },
-                { title: "分类", href: "/list/", channel: "", imgsrc: '../imgs/index/Footer-fenlei.png' },
-                { title: "频道", href: "/pindao/", channel: "", imgsrc: '../imgs/index/Footer-pindao.png' },
-                { title: "购物车", href: "/car/", channel: "", imgsrc: '../imgs/index/Footer-car.png' },
-                { title: "我的", href: "/my/", channel: "", imgsrc: '../imgs/index/Footer-my.png' }
+                { title: "首页", href: "/home/", channel: "", imgsrc: 'https://img.miyabaobei.com/d1/p4/2016/09/18/fb/a0/fba006d51eb091cf3b63299c59d5e38c813134250.png' },
+                { title: "分类", href: "/list/", channel: "", imgsrc: 'https://img.miyabaobei.com/d1/p5/2016/09/18/90/f1/90f1f82889b47a8de835621452eed22e790295573.png' },
+                { title: "购物车", href: "/car/", channel: "", imgsrc: 'https://img.miyabaobei.com/d1/p4/2016/09/18/88/4e/884e4655e40f2c8e0ad9463a52de7546790508785.png' },
+                { title: "我的", href: "/my/", channel: "", imgsrc: 'https://img.miyabaobei.com/d1/p5/2016/09/18/83/b5/83b56a7715f4c3184b5fc141a6a66435790687263.png' }
             ]
         }
     }
@@ -23,29 +22,32 @@ class Hfooter extends Component {
         this.setState({
             nav: index
         })
-        this.props.dispatch.push(this.state.navs[index].href)
+        // this.props.dispatch.push(this.state.navs[index].href)
     }
     render() {
         return (
-            <div id="nav" className="nav clear">
-                {
-                    (() => {
-                        return this.state.navs.map((item, index) => {
-                            return (
-                                <Link to={{ pathname: `${item.href}` }} replace key={index}
-                                    onClick={this.gotopath.bind(this, index)}
-                                >
-                                    <span id="nav-item" className="nav-item-active">
-                                        <img src={item.imgsrc} alt="1" />
-                                        <span className='f-title'>{item.title}</span>
-                                    </span>
-                                </Link>
-                            )
-                        })
-                    })()
-                }
+            <div className="footerNav">
+                <ul className="tab5">
+                    {
+                        (() => {
+                            return this.state.navs.map((item, index) => {
+                                return (
 
+                                    <li className="cur">
+                                        <Link to={{ pathname: `${item.href}` }} replace key={index}
+                                            onClick={this.gotopath.bind(this, index)}>
+                                            <img src={item.imgsrc} cursrc={item.imgsrc} alt='' />
+                                            <span className='f-title'>{item.title}</span>
+                                        </Link>
+                                    </li>
 
+                                )
+
+                            })
+                        })()
+                    }
+
+                </ul>
             </div>
         )
     }
