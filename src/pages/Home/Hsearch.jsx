@@ -10,6 +10,7 @@ class Hsearch extends Component {
     }
     render() {
         return (
+<<<<<<< HEAD
             <div  className="z_sea">
                 <div className="kong"></div>
                 <div className="z_title">
@@ -19,6 +20,9 @@ class Hsearch extends Component {
                 <div className="kong">
                     <i className="fa fa-search-plus" aria-hidden="true"></i>
                 </div>
+=======
+            <div >
+>>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
             </div>
         )
     }

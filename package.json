@@ -1,11 +1,14 @@
 {
-  "name": "fanke",
+  "name": "miya",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
+<<<<<<< HEAD
     "antd-mobile-rn": "^2.3.1",
+=======
+>>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
     "axios": "^0.18.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -50,8 +53,13 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "resolve": "1.8.1",
+<<<<<<< HEAD
     "style-loader": "0.23.0",
     "swiper": "^4.4.2",
+=======
+    "sass-loader": "7.1.0",
+    "style-loader": "0.23.0",
+>>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
@@ -121,8 +129,12 @@
   },
   "devDependencies": {
     "less": "^3.9.0",
+<<<<<<< HEAD
     "less-loader": "^4.1.0",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0"
+=======
+    "less-loader": "^4.1.0"
+>>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
   }
 }

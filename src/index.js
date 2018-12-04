@@ -3,15 +3,20 @@ import axios from 'axios';
 import ReactDOM from 'react-dom';
 
 //路由
-import {HashRouter as Router} from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 //状态管理 配置store的
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 //把上面配置好的store 和 react 进行关联
 import { Provider } from 'react-redux';
+// import './styles/App.css';
 import './styles/index.css';
 import './styles/base.css';
+<<<<<<< HEAD
 
 
+=======
+import './styles/List.css';
+>>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 React.axios = axios;
@@ -23,15 +28,26 @@ React.axios = axios;
 // action交换数据的动作
 
 const store = createStore((state = {
-    title :'haha',
-    isShow:false
-},action)=>{
-    switch(action.type){
-        case 'add' :
+    title: 'haha',
+    showlist :{
+        isShowlists: false,
+        isShowlist : true
+    }
+    
+}, action) => {
+    switch (action.type) {
+        case 'toggleList':
+            return {
+                ...state,
+                showlist : action.showlist
+            };
+        case 'add2':
             return state;
-        case '2' :
+        case 'add3':
             return state;
-        default :
+        case 'add4':
+            return state;
+        default:
             return state;
     }
 })
@@ -41,8 +57,8 @@ ReactDOM.render(
         <Router>
             <App />
         </Router>
-    </Provider>, 
-document.getElementById('root'));
+    </Provider>,
+    document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
