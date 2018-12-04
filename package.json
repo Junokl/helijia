@@ -50,9 +50,15 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "resolve": "1.8.1",
+<<<<<<< HEAD
     "swiper": "^4.4.2",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
+=======
+    "style-loader": "0.23.0",
+    "swiper": "^4.4.2",
+    "sass-loader": "7.1.0",
+>>>>>>> 61f3d7c3c2b225419940ece3387e633f1693b5bd
     "terser-webpack-plugin": "1.1.0",
     "url-loader": "1.1.1",
     "webpack": "4.19.1",
