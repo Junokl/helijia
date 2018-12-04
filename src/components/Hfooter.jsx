@@ -4,10 +4,7 @@ import { connect } from 'react-redux';
 class Hfooter extends Component {
     constructor(props) {
         super(props);
-<<<<<<< HEAD
         // console.log(props)
-=======
->>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
         this.props = props;
         // console.log(props);
         this.state = {
@@ -51,13 +48,8 @@ class Hfooter extends Component {
                         (() => {
                             return this.state.navs.map((item, index) => {
                                 return (
-<<<<<<< HEAD
-
-                                    <li className="cur" key={index}>
-=======
                                     <li key={index} className="cur" onClick={this.getlist.bind(this,index)}
                                     >
->>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
                                         <Link to={{ pathname: `${item.href}` }} replace key={index}
                                            >
                                             <img src={item.imgsrc} cursrc={item.imgsrc} alt='' />

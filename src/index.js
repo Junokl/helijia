@@ -11,12 +11,7 @@ import { Provider } from 'react-redux';
 // import './styles/App.css';
 import './styles/index.css';
 import './styles/base.css';
-<<<<<<< HEAD
-
-
-=======
 import './styles/List.css';
->>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 React.axios = axios;
