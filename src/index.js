@@ -7,8 +7,10 @@ import { HashRouter as Router } from 'react-router-dom';
 import { createStore } from 'redux';
 //把上面配置好的store 和 react 进行关联
 import { Provider } from 'react-redux';
+// import './styles/App.css';
 import './styles/index.css';
 import './styles/base.css';
+import './styles/List.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 React.axios = axios;
@@ -21,11 +23,18 @@ React.axios = axios;
 
 const store = createStore((state = {
     title: 'haha',
-    isShow: false
+    showlist :{
+        isShowlists: false,
+        isShowlist : true
+    }
+    
 }, action) => {
     switch (action.type) {
-        case 'add':
-            return state;
+        case 'toggleList':
+            return {
+                ...state,
+                showlist : action.showlist
+            };
         case 'add2':
             return state;
         case 'add3':

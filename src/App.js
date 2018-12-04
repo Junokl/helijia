@@ -11,6 +11,7 @@ class App extends Component {
         <Switch>
           <Route path='/home/' component={Index} />
           <Route path='/list/' component={List} />
+          
           <Route path='/car/' component={Car} />
           <Route path='/my/' component={User} />
           <Redirect exact from='/' to='/home' />
