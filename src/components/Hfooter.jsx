@@ -4,9 +4,9 @@ import { connect } from 'react-redux';
 class Hfooter extends Component {
     constructor(props) {
         super(props);
-        console.log(props)
+        // console.log(props)
         this.props = props;
-        console.log(props);
+        // console.log(props);
         this.state = {
             nav: 0,
             navs: [
@@ -18,7 +18,7 @@ class Hfooter extends Component {
         }
     }
     gotopath(index, e) {
-        console.log(index);
+        // console.log(index);
         this.setState({
             nav: index
         })
@@ -33,7 +33,7 @@ class Hfooter extends Component {
                             return this.state.navs.map((item, index) => {
                                 return (
 
-                                    <li className="cur">
+                                    <li className="cur" key={index}>
                                         <Link to={{ pathname: `${item.href}` }} replace key={index}
                                             onClick={this.gotopath.bind(this, index)}>
                                             <img src={item.imgsrc} cursrc={item.imgsrc} alt='' />
@@ -53,7 +53,7 @@ class Hfooter extends Component {
     }
 }
 export default connect((state) => {
-    console.log(state)
+    // console.log(state)
     return state;
 }, (dispatch) => {
     return {

@@ -4,6 +4,7 @@ import Index from './pages/Home/index.jsx';
 import List from './pages/List/List.jsx';
 import Car from './pages/Car/Car.jsx';
 import User from './pages/User/User.jsx';
+
 class App extends Component {
   render() {
     return (
