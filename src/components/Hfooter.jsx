@@ -4,10 +4,6 @@ import { connect } from 'react-redux';
 class Hfooter extends Component {
     constructor(props) {
         super(props);
-<<<<<<< HEAD
-        // console.log(props)
-=======
->>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
         this.props = props;
         // console.log(props);
         this.state = {
@@ -27,20 +23,21 @@ class Hfooter extends Component {
         })
         // this.props.dispatch.push(this.state.navs[index].href)
     }
-    getlist(index,e){
-        // console.log(index);
-        
-        // for(var i=0;i<this.state.navs.length;i++){
-            console.log(this.props)
-            this.props.togglelist(true,false) 
-            // if(this===1){
-            //     console.log(6666);
-            //     this.props.toggleList.bind(this,this.props.showlist);
-                
-            // }
+    getlist(index, e) {
+        console.log(index);
+        console.log(111111111111111111111111)
+        console.log(e);
+        console.log(222222222222222222222222)
+        console.log(this.props)
+        this.props.togglelist.bind(e)
+        // if(this===1){
+        //     console.log(6666);
+        //     this.props.toggleList.bind(this,this.props.showlist);
+
         // }
-        console.log(this)
-        
+        // }
+        console.log(this.props.showlist)
+
         // console.log(this.props.showlist)
     }
     render() {
@@ -51,15 +48,10 @@ class Hfooter extends Component {
                         (() => {
                             return this.state.navs.map((item, index) => {
                                 return (
-<<<<<<< HEAD
 
-                                    <li className="cur" key={index}>
-=======
-                                    <li key={index} className="cur" onClick={this.getlist.bind(this,index)}
-                                    >
->>>>>>> 1ade7f89e342e7d3b8430212b929ad2d615d783b
+                                    <li className="cur" key={index} onClick={this.getlist(this,this.props.showlist)}>
                                         <Link to={{ pathname: `${item.href}` }} replace key={index}
-                                           >
+                                        >
                                             <img src={item.imgsrc} cursrc={item.imgsrc} alt='' />
                                             <span className='f-title'>{item.title}</span>
                                         </Link>
@@ -81,12 +73,12 @@ export default connect((state) => {
     return state;
 }, (dispatch) => {
     return {
-        togglelist(bol,dol) {
+        togglelist() {
             dispatch({
                 type: 'togglelist',
                 showlist: {
-                    isShowlist: bol,
-                    isShowlists: dol
+                    isShowlist: !this.props.showlist.isShowlist,
+                    isShowlists: !this.props.showlist.isShowlists,
                 }
 
             })
